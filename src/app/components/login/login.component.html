@@ -1,0 +1,30 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-4">
+            <h3 class="text-center text-primary mt-3">Polling App Login</h3>
+            <div class="card mt-4 shadow">
+
+                <div class="card-body">
+                    <form action="" [formGroup]="loginForm">
+                        <label for="email" class="form-label ">Email</label>
+                        <input type="email" formControlName ="email" class="form-control mb-2">
+
+                        <label for="password" class="form-label">Password</label>
+                        <input type="text" formControlName="password" class="form-control mb-4">
+
+                        <button class="btn btn-primary w-100 mb-2">Login</button>
+
+                        <div  class="text-end">
+                            <a href="/register">Don't have account? <span class="text-danger">Register</span> </a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+</div>
