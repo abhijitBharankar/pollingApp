@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject, forwardRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FireService } from 'src/app/services/fire.service';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ export class RegisterComponent {
 
   registerForm ! :FormGroup
 
-  constructor( private fb:  FormBuilder){
+  constructor( private fb:  FormBuilder, private fire: FireService){
 
   }
 
@@ -21,7 +22,11 @@ export class RegisterComponent {
   registerControls(){
     this.registerForm = this.fb.group({
       email : [''],
-      password : []
+      password : ['']
     })
+  }
+
+  register(){
+    this.fire.register(this.registerForm.value.email, this.registerForm.value.password)
   }
 }

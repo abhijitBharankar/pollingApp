@@ -8,6 +8,15 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { MypollsComponent } from './components/mypolls/mypolls.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { SharedModule } from './shared/shared.module';
+import { FireService } from './services/fire.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { CreatePollComponent } from './components/create-poll/create-poll.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +24,22 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     RegisterComponent,
     LoginComponent,
-    MypollsComponent
+    MypollsComponent,
+    CreatePollComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
+    AngularFireModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [FireService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

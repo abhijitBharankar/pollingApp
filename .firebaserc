@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "polling-app-5efb5": {
+      "hosting": {
+        "pollingApp": [
+          "polling-app-5efb5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "polling-app-5efb5"
+  }
+}

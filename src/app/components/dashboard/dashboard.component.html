@@ -1,1 +1,49 @@
-<p>dashboard works!</p>
+<nav class="navbar navbar-expand-lg bg-body-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-primary" routerLink="/dashboard">Polling App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-primary" aria-current="page" routerLink="/dashboard"><i class="bi bi-house mx-2 text-primary"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" aria-current="page" routerLink="/mypolls"><i class="bi bi-pie-chart-fill mx-2 text-primary"></i>Polls</a>
+        </li>
+      </ul>
+      <button class="btn btn-danger" (click)="logout()">Logout</button>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center mt-4">
+  <h1 class="display-1">Votecast</h1>
+  <div class="row">
+      <div class="col-6"></div>
+      <div class="col-6 text-start px-4">
+          <p>...... your ideas <i class="bi bi-lightbulb"></i></p>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="card col box display-6">
+      <a href=""><i class="bi bi-hand-thumbs-up-fill mx-2"></i>Vote</a>
+    </div>
+    <div class="card col box display-6">
+      <a href=""><i class="bi bi-plus-circle-fill mx-2"></i>Create</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card col box display-6">
+     <a href=""><i class="bi bi-eye-fill mx-2"></i>View</a>
+    </div>
+    <div class="card col box display-6">
+      <a href=""><i class="bi bi-share-fill mx-2"></i>Share</a>
+    </div>
+  </div>
+</div>

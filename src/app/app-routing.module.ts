@@ -6,8 +6,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MypollsComponent } from './components/mypolls/mypolls.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: '~', component: LoginComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: 'login', component: DashboardComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'mypolls', component: MypollsComponent}

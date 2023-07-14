@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col"></div>
         <div class="col-4">
-            <h3 class="text-center text-primary mt-3">Polling App Login Page</h3>
+            <h3 class="text-center text-primary mt-3">Polling App Login</h3>
             <div class="card mt-4 shadow">
 
                 <div class="card-body">
@@ -14,7 +14,8 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="text" formControlName="password" class="form-control mb-4">
 
-                        <button class="btn btn-primary w-100 mb-2">Login</button>
+                        <button class="btn btn-primary w-100 mb-2" (click)="login()">Login</button>
+                        <button class="btn btn-danger w-100 mb-2" (click)="signWithGoogle()">Sign in with Google</button>
 
                         <div  class="text-end">
                             <a href="/register">Don't have account? <span class="text-danger">Register</span> </a>
